@@ -219,7 +219,7 @@ def broadcastvidfullbtn(update: Update, context: CallbackContext):
 
 
 
-def jb_1_area(update: Update, context: CallbackContext):
+def KL_area(update: Update, context: CallbackContext):
     keyboard = InlineKeyboardMarkup([
         [InlineKeyboardButton("Bukit Indah", url="https://www.jbescortsvc.com/jb-1-area/bukit-indah-1")],
         [InlineKeyboardButton("Desa Tebrau", url="https://www.jbescortsvc.com/jb-1-area/desa-tebrau-1")],
@@ -258,7 +258,7 @@ def main():
     dp.add_handler(CommandHandler("broadcastvidfullbtn", broadcastvidfullbtn))
     dp.add_handler(CommandHandler("list", list_users))
     dp.add_handler(CommandHandler("count", count_subscribers))
-    dp.add_handler(CommandHandler("jb1", jb_1_area))
+    dp.add_handler(CommandHandler("kl", KL_area))
 
     updater.start_polling()
     updater.idle()
