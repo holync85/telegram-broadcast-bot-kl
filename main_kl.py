@@ -221,16 +221,17 @@ def broadcastvidfullbtn(update: Update, context: CallbackContext):
 
 def KL_area(update: Update, context: CallbackContext):
     keyboard = InlineKeyboardMarkup([
-        [InlineKeyboardButton("Bukit Indah", url="https://www.jbescortsvc.com/jb-1-area/bukit-indah-1")],
-        [InlineKeyboardButton("Desa Tebrau", url="https://www.jbescortsvc.com/jb-1-area/desa-tebrau-1")],
-        [InlineKeyboardButton("JB Town", url="https://www.jbescortsvc.com/jb-1-area/jb-town-2")],
-        [InlineKeyboardButton("Mount Austin", url="https://www.jbescortsvc.com/jb-1-area/mount-austin")],
+        [InlineKeyboardButton("Cheras", url="https://www.jbescortsvc.com/kl-area/cheras")],
+        [InlineKeyboardButton("Damansara", url="https://www.jbescortsvc.com/kl-area/damansara")],
+        [InlineKeyboardButton("Kepong", url="https://www.jbescortsvc.com/kl-area/kepong")],
+        [InlineKeyboardButton("Kuchai Lama", url="https://www.jbescortsvc.com/kl-area/kuchai-lama")],
         [InlineKeyboardButton("Nusa Bestari", url="https://www.jbescortsvc.com/jb-1-area/nusa-bestari")],
-        [InlineKeyboardButton("Permas", url="https://www.jbescortsvc.com/jb-1-area/permas-1")],
-        [InlineKeyboardButton("Taman Daya", url="https://www.jbescortsvc.com/jb-1-area/taman-daya")],
-        [InlineKeyboardButton("Permas Shop", url="https://www.jbescortsvc.com/jb-1-area/permas-shop")],
-        [InlineKeyboardButton("Sentosa Shop", url="https://www.jbescortsvc.com/jb-1-area/sentosa-shop")],
-        [InlineKeyboardButton("Sentosa 2 Shop", url="https://www.jbescortsvc.com/jb-1-area/sentosa-2-shop")],
+        [InlineKeyboardButton("Petaling Jaya", url="https://www.jbescortsvc.com/kl-area/petaling-jaya")],
+        [InlineKeyboardButton("Puchong", url="https://www.jbescortsvc.com/kl-area/puchong-1")],
+        [InlineKeyboardButton("Sri Hartamas", url="https://www.jbescortsvc.com/kl-area/sri-hartamas")],
+        [InlineKeyboardButton("Sri Petaling", url="https://www.jbescortsvc.com/kl-area/sri-petaling")],
+        [InlineKeyboardButton("Sunway", url="https://www.jbescortsvc.com/kl-area/sunway")],
+        [InlineKeyboardButton("Taman Danau Desa", url="https://www.jbescortsvc.com/kl-area/taman-danau-desa")],
     ])
     update.message.reply_text("Click Area：", reply_markup=keyboard)
 
