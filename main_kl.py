@@ -15,7 +15,7 @@ load_dotenv()
 TOKEN = os.getenv("TOKEN")
 ADMIN_ID = int(os.getenv("ADMIN_ID", "0"))
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
-REPO = os.getenv("GITHUB_REPO", "holync85/telegram-broadcast-bot-v2")
+REPO = os.getenv("GITHUB_REPO", "holync85/telegram-broadcast-bot-kl")
 REPO = "holync85/telegram-broadcast-bot-kl"
 FILE_PATH = "subscribers_kl.json"
 GITHUB_API_URL = f"https://api.github.com/repos/{REPO}/contents/{FILE_PATH}"
@@ -219,18 +219,6 @@ def broadcastvidfullbtn(update: Update, context: CallbackContext):
 
 
 
-
-def jb_hot_area(update: Update, context: CallbackContext):
-    keyboard = InlineKeyboardMarkup([
-        [InlineKeyboardButton("JB Town", url="https://www.jbescortsvc.com/jb-hot-area/jb-town-1")],
-        [InlineKeyboardButton("Setia Indah", url="https://www.jbescortsvc.com/jb-hot-area/setia-indah")],
-        [InlineKeyboardButton("Sentosa", url="https://www.jbescortsvc.com/jb-hot-area/sentosa")],
-        [InlineKeyboardButton("Sri Tebrau", url="https://www.jbescortsvc.com/jb-hot-area/sri-tebrau")],
-        [InlineKeyboardButton("Sri Tebrau 2", url="https://www.jbescortsvc.com/jb-hot-area/sri-tebrau-2")],
-    ])
-    update.message.reply_text("Click Area：", reply_markup=keyboard)
-
-
 def jb_1_area(update: Update, context: CallbackContext):
     keyboard = InlineKeyboardMarkup([
         [InlineKeyboardButton("Bukit Indah", url="https://www.jbescortsvc.com/jb-1-area/bukit-indah-1")],
@@ -246,20 +234,6 @@ def jb_1_area(update: Update, context: CallbackContext):
     ])
     update.message.reply_text("Click Area：", reply_markup=keyboard)
 
-
-def jb_2_area(update: Update, context: CallbackContext):
-    keyboard = InlineKeyboardMarkup([
-        [InlineKeyboardButton("Bukit Indah", url="https://www.jbescortsvc.com/jb-2-area/bukit-indah")],
-        [InlineKeyboardButton("Desa Tebrau", url="https://www.jbescortsvc.com/jb-2-area/desa-tebrau")],
-        [InlineKeyboardButton("JB Town", url="https://www.jbescortsvc.com/jb-2-area/jb-town")],
-        [InlineKeyboardButton("Pelangi", url="https://www.jbescortsvc.com/jb-2-area/pelangi")],
-        [InlineKeyboardButton("Perling", url="https://www.jbescortsvc.com/jb-2-area/perling")],
-        [InlineKeyboardButton("Permas", url="https://www.jbescortsvc.com/jb-2-area/permas")],
-        [InlineKeyboardButton("KSL (CN)", url="https://www.jbescortsvc.com/jb-2-area/ksl-cn")],
-        [InlineKeyboardButton("Nusa Bestari (CN)", url="https://www.jbescortsvc.com/jb-2-area/nusa-bestari-cn")],
-        [InlineKeyboardButton("Sentosa (CN)", url="https://www.jbescortsvc.com/jb-2-area/sentosa-cn")],
-    ])
-    update.message.reply_text("Click Area：", reply_markup=keyboard)
 
 
 def keep_alive():
@@ -284,9 +258,7 @@ def main():
     dp.add_handler(CommandHandler("broadcastvidfullbtn", broadcastvidfullbtn))
     dp.add_handler(CommandHandler("list", list_users))
     dp.add_handler(CommandHandler("count", count_subscribers))
-    dp.add_handler(CommandHandler("jbhot", jb_hot_area))
     dp.add_handler(CommandHandler("jb1", jb_1_area))
-    dp.add_handler(CommandHandler("jb2", jb_2_area))
 
     updater.start_polling()
     updater.idle()
