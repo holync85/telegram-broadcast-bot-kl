@@ -59,6 +59,14 @@ def start(update: Update, context: CallbackContext):
         save_subscribers()
     update.message.reply_text("Done ✅")
 
+def stop(update: Update, context: CallbackContext):
+    user_id = update.effective_user.id
+    if user_id in subscribers:
+        subscribers.remove(user_id)
+        save_subscribers()
+        update.message.reply_text("Cancel ❌")
+
+
 def broadcast(update: Update, context: CallbackContext):
     if update.effective_user.id != ADMIN_ID: return update.message.reply_text("❌ 无权限")
     message = ' '.join(context.args)
@@ -235,6 +243,14 @@ def KL_area(update: Update, context: CallbackContext):
     ])
     update.message.reply_text("Click Area：", reply_markup=keyboard)
 
+def booking(update: Update, context: CallbackContext):
+    keyboard = InlineKeyboardMarkup([
+        [InlineKeyboardButton("WhatsApp", url="https://wa.me/601156603628?text=PM_KL")],
+        [InlineKeyboardButton("Telegram Admin", url="https://t.me/klescort8")],
+        [InlineKeyboardButton("Live Admin", url="https://go.crisp.chat/chat/embed/?website_id=67d3163f-bdc3-4f3c-a603-e13ab2c65730")],     
+    ])
+    update.message.reply_text("Click Area：", reply_markup=keyboard)
+
 
 
 def keep_alive():
@@ -248,6 +264,7 @@ def main():
     updater = Updater(TOKEN, use_context=True)
     dp = updater.dispatcher
     dp.add_handler(CommandHandler("start", start))
+    dp.add_handler(CommandHandler("stop", stop))
     dp.add_handler(CommandHandler("broadcast", broadcast))
     dp.add_handler(CommandHandler("broadcastpic", broadcastpic))
     dp.add_handler(CommandHandler("broadcastvideo", broadcastvideo))
@@ -260,6 +277,7 @@ def main():
     dp.add_handler(CommandHandler("list", list_users))
     dp.add_handler(CommandHandler("count", count_subscribers))
     dp.add_handler(CommandHandler("kl", KL_area))
+    dp.add_handler(CommandHandler("booking", booking))
 
     updater.start_polling()
     updater.idle()
