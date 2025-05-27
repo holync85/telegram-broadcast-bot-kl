@@ -53,14 +53,14 @@ def save_subscribers():
     print("✅ GitHub 更新成功" if res.status_code in [200, 201] else f"❌ GitHub 更新失败: {res.text}")
 
 def start(update: Update, context: CallbackContext):
-    user_id = update.effective_user.id
+    user_id = str(update.effective_user.id)
     if user_id not in subscribers:
         subscribers.add(user_id)
         save_subscribers()
     update.message.reply_text("Done ✅")
 
 def stop(update: Update, context: CallbackContext):
-    user_id = update.effective_user.id
+    user_id = str(update.effective_user.id)
     if user_id in subscribers:
         subscribers.remove(user_id)
         save_subscribers()
