@@ -251,6 +251,7 @@ def KL_area(update: Update, context: CallbackContext):
         [InlineKeyboardButton("Kuchai Lama", url="https://www.jbescortsvc.com/kl-area/kuchai-lama")],
         [InlineKeyboardButton("Petaling Jaya", url="https://www.jbescortsvc.com/kl-area/petaling-jaya")],
         [InlineKeyboardButton("Puchong", url="https://www.jbescortsvc.com/kl-area/puchong-1")],
+        [InlineKeyboardButton("Puchong 2", url="https://www.jbescortsvc.com/kl-area/puchong-2")],
         [InlineKeyboardButton("Sri Hartamas", url="https://www.jbescortsvc.com/kl-area/sri-hartamas")],
         [InlineKeyboardButton("Sri Petaling", url="https://www.jbescortsvc.com/kl-area/sri-petaling")],
         [InlineKeyboardButton("Sunway", url="https://www.jbescortsvc.com/kl-area/sunway")],
