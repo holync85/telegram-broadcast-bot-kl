@@ -250,10 +250,11 @@ def KL_area(update: Update, context: CallbackContext):
         [InlineKeyboardButton("Kepong", url="https://www.jbescortsvc.com/kl-area/kepong")],
         [InlineKeyboardButton("Kuchai Lama", url="https://www.jbescortsvc.com/kl-area/kuchai-lama")],
         [InlineKeyboardButton("Petaling Jaya", url="https://www.jbescortsvc.com/kl-area/petaling-jaya")],
-        [InlineKeyboardButton("Puchong 2", url="https://www.jbescortsvc.com/kl-area/puchong-2")],
+        [InlineKeyboardButton("Puchong", url="https://www.jbescortsvc.com/kl-area/puchong")],
+        [InlineKeyboardButton("Setapak", url="https://www.jbescortsvc.com/kl-area/setapak")],
         [InlineKeyboardButton("Sri Hartamas", url="https://www.jbescortsvc.com/kl-area/sri-hartamas")],
         [InlineKeyboardButton("Sri Petaling", url="https://www.jbescortsvc.com/kl-area/sri-petaling")],
-        [InlineKeyboardButton("Sunway", url="https://www.jbescortsvc.com/kl-area/sunway")],
+        [InlineKeyboardButton("Sri Petaling 2", url="https://www.jbescortsvc.com/kl-area/sri-petaling-2")],
         [InlineKeyboardButton("Taman Danau Desa", url="https://www.jbescortsvc.com/kl-area/taman-danau-desa")],
     ])
     update.message.reply_text("Click Area：", reply_markup=keyboard)
